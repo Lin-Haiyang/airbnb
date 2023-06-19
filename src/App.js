@@ -1,11 +1,15 @@
-import React, { memo } from 'react'
-import HelloWord from 'components/hello-word'
+import React, { memo } from "react";
+import { useRoutes } from "react-router-dom";
+import routes from "./router";
 
-
-export default memo(function App() {
+const App = memo(() => {
   return (
-    <div>
-      <HelloWord/>
+    <div className="app">
+      <div className="header">header</div>
+      <div className="page">{useRoutes(routes)}</div>
+      <div className="footer">footer</div>
     </div>
-  )
-})
+  );
+});
+
+export default App;
