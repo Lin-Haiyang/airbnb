@@ -3,8 +3,6 @@ import { HomeBannerWrapper } from './style'
 
 export default memo(function HomeBanner() {
   return (
-    <HomeBannerWrapper>
-      HomeBanner
-    </HomeBannerWrapper>
+    <HomeBannerWrapper></HomeBannerWrapper>
   )
 })
