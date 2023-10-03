@@ -27,7 +27,7 @@ export const fetchHomeDataAction = createAsyncThunk('fetchHomeDataAction', (payl
   });
 })
 
-const homeReducer = createSlice({
+const homeSlice = createSlice({
   name: 'home',
   initialState: {
     goodsPriceInfo: {},
@@ -59,7 +59,6 @@ const homeReducer = createSlice({
   },
   // extraReducers(builder) {
   //   builder.addCase(fetchGoodsPriceInfo.fulfilled, (state, { payload }) => {
-  //     console.log("🚀 ~ file: home.js:19 ~ builder.addCase ~ payload:", payload)
   //     state.goodsPriceInfo = payload;
   //   })
   // }
@@ -72,6 +71,6 @@ export const {
   changeHotRecommendAction,
   changeLongForInfoAction,
   changePlusAction
-} = homeReducer.actions;
+} = homeSlice.actions;
 
-export default homeReducer.reducer;
+export default homeSlice.reducer;

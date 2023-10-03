@@ -31,4 +31,5 @@ class LHYRequest {
   }
 }
 
-export default new LHYRequest(BASE_URL, TIMEOUT);
+const lhyRequest = new LHYRequest(BASE_URL, TIMEOUT);
+export default lhyRequest;
