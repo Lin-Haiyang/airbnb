@@ -5,11 +5,13 @@ import EntireRooms from './c-cpns/entire-rooms'
 import EntirePagination from './c-cpns/entire-pagination'
 import { useDispatch } from 'react-redux'
 import { fetchEntireListAction } from '@/store/features/entire/actionCreators'
+import { changeHeaderConfigAction } from '@/store/features/main'
 
 const Entire = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchEntireListAction())
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: false }))
   })
   return (
     <EntireWrapper>

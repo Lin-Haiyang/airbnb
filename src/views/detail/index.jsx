@@ -1,6 +1,6 @@
-import { changeHeaderConfigAction } from '@/store/features/main'
 import React, { memo, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
+import { changeHeaderConfigAction } from '@/store/features/main'
 import DetailInfos from './c-cpns/detail-infos'
 import DetailPictures from './c-cpns/detail-pictures'
 import { DetailWrapper } from './style'

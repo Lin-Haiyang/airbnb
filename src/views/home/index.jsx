@@ -4,6 +4,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { HomeWrapper } from './style'
 import HomeBanner from './c-cpns/home-banner'
 import { fetchHomeDataAction } from '@/store/features/home'
+import { changeHeaderConfigAction } from '@/store/features/main'
 import { isEmptyO } from '@/utils'
 import HomeSectionV1 from './c-cpns/home-section-v1'
 import HomeSectionV2 from './c-cpns/home-section-v2'
@@ -25,6 +26,7 @@ const Home = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchHomeDataAction())
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: true }))
   }, [dispatch])
 
   return (
